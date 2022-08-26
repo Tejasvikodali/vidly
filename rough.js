@@ -1,1 +1,3 @@
 // git remote set-url origin https://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@github.com/ Tejasvikodali/vidly.git
+
+//heroku link :  https://vidlycgt.herokuapp.com
