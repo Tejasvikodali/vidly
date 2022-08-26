@@ -9,7 +9,7 @@ const Joi = require("joi");
 router.post("/", async (req, res) => {
   try {
     console.log("users post route...!");
-    console.log("hitted");
+    console.log("hitted.....");
     const { error } = validateUser(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
