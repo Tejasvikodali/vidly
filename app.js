@@ -210,7 +210,7 @@ const server = app.listen(port, () =>
   winston.info(`Listening on port ${port}...`)
 );
 app.get("/messages", (req, res) => {
-  res.send("Hello Codegene company");
+  res.send("Hello Codegene!");
 });
 
 module.exports = server;
