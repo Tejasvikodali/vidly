@@ -9,6 +9,13 @@ const router = express.Router();
 const { Genre, validateGenre } = require("../models/genres");
 //const asyncMiddleware = require("../middleware/async");
 //router.get("/another", (req, res, next) => {});
+module.exports = function (app) {
+  app.get("/", (req, res) => {
+    res.send("Hello Codegene Software");
+
+    res.end();
+  });
+};
 
 router.get("/", async (req, res, next) => {
   // throw new Error("Could not get the genres.");
