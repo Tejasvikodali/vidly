@@ -6,5 +6,5 @@ module.exports = function () {
   mongoose
     .connect(db)
 
-    .then(() => winston.info(`Connected to ${db}...`));
+    .then(() => console.log(`Connected to ${db}...`));
 };
