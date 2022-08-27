@@ -138,6 +138,10 @@ require("dotenv").config();
 
 const express = require("express");
 const app = express();
+
+// app.get("/messages", (req, res) => {
+//   res.send("Hello Codegene!");
+// });
 //const users = require("./routes/users");
 //const auth = require("./routes/auth");
 require("./startups/db")();
@@ -209,5 +213,8 @@ const port = process.env.PORT || 8100;
 const server = app.listen(port, () =>
   winston.info(`Listening on port ${port}...`)
 );
+// app.get("/messages", (req, res) => {
+//   res.send("Hello Codegene!");
+// });
 
 module.exports = server;
