@@ -209,7 +209,7 @@ require("./startups/prod")(app);
 //app.use(error);
 // console.log(process.env.jwtPrivateKey);
 
-const port = process.env.PORT || 8100;
+const port = process.env.PORT || 8080;
 const server = app.listen(port, () =>
   winston.info(`Listening on port ${port}...`)
 );
