@@ -147,9 +147,9 @@ const app = express();
 //   res.end();
 // });
 
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
 
-const server = app.listen(PORT, console.log(`Server started on port ${PORT}`));
+// const server = app.listen(PORT, console.log(`Server started on port ${PORT}`));
 
 // app.get("/messages", (req, res) => {
 //   res.send("Hello Codegene!");
@@ -229,4 +229,4 @@ require("./startups/prod")(app);
 //   res.send("Hello Codegene!");
 // });
 
-module.exports = server;
+// module.exports = server;
