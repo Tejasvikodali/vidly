@@ -9,7 +9,7 @@ require("../routes/returns");
 const error = require("../middleware/error");
 
 module.exports = function (app) {
-  app.get("/", (req, res) => {
+  app.get("/message", (req, res) => {
     res.send("Hello Codegene!");
   });
   app.use(express.json());

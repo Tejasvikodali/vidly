@@ -138,6 +138,10 @@ require("dotenv").config();
 
 const express = require("express");
 const app = express();
+
+// app.get("/messages", (req, res) => {
+//   res.send("Hello Codegene!");
+// });
 //const users = require("./routes/users");
 //const auth = require("./routes/auth");
 require("./startups/db")();
