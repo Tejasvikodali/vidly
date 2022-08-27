@@ -145,7 +145,7 @@ const app = express();
 // Getting Request
 app.get("/", (req, res) => {
   // Sending the response
-  res.send("Hello World!");
+  res.send("Hello Codegene Software");
 
   // Ending the response
   res.end();
