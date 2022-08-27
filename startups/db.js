@@ -6,5 +6,8 @@ module.exports = function () {
   mongoose
     .connect(db)
 
-    .then(() => console.log(`Connected to ${db}...`));
+    .then(
+      () => console.log(`Connected to ${db}...`),
+      console.log("listening to port ")
+    );
 };

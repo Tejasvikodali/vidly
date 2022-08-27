@@ -157,6 +157,7 @@ const app = express();
 //const users = require("./routes/users");
 //const auth = require("./routes/auth");
 require("./startups/db")();
+console.log("going to route");
 
 require("./startups/routes")(app);
 

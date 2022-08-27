@@ -7,6 +7,7 @@ const users = require("../routes/users");
 const auth = require("../routes/auth");
 require("../routes/returns");
 const error = require("../middleware/error");
+console.log("Hello Codegene Software");
 
 module.exports = function (app) {
   app.get("/", (req, res) => {
@@ -14,6 +15,15 @@ module.exports = function (app) {
 
     res.end();
   });
+  console.log("after hello");
+  const PORT = process.env.PORT || 6000;
+
+  const server = app.listen(
+    PORT,
+    console.log(`Server started on port ${PORT}`)
+  );
+
+  module.exports = server;
 
   app.use(express.json());
   app.use("/api/genres", genres);
@@ -24,13 +34,4 @@ module.exports = function (app) {
   app.use("/api/auth", auth);
   app.use("/api/rentals", rentals);
   app.use(error);
-
-  const PORT = process.env.PORT || 5000;
-
-  const server = app.listen(
-    PORT,
-    console.log(`Server started on port ${PORT}`)
-  );
-
-  module.exports = server;
 };
