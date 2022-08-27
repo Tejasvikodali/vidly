@@ -136,16 +136,16 @@ const winston = require("winston");
 //const rentals = require("./routes/rentals");
 require("dotenv").config();
 
-// const express = require("express");
-// const app = express();
 const express = require("express");
 const app = express();
+// const express = require("express");
+// const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello Codegene Software");
+// app.get("/", (req, res) => {
+//   res.send("Hello Codegene Software");
 
-  res.end();
-});
+//   res.end();
+// });
 
 const PORT = process.env.PORT || 5000;
 
