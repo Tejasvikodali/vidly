@@ -138,23 +138,17 @@ require("dotenv").config();
 
 // const express = require("express");
 // const app = express();
-// Importing express module
 const express = require("express");
 const app = express();
 
-// Getting Request
 app.get("/", (req, res) => {
-  // Sending the response
   res.send("Hello Codegene Software");
 
-  // Ending the response
   res.end();
 });
 
-// Establishing the port
 const PORT = process.env.PORT || 5000;
 
-// Executing the server on given port number
 const server = app.listen(PORT, console.log(`Server started on port ${PORT}`));
 
 // app.get("/messages", (req, res) => {
