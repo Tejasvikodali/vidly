@@ -14,6 +14,13 @@ module.exports = function (app) {
 
     res.end();
   });
+  const PORT = process.env.PORT || 7000;
+
+  const server = app.listen(
+    PORT,
+    console.log(`Server started on port ${PORT}`)
+  );
+
   app.use(express.json());
   app.use("/api/genres", genres);
   app.use("/api/customers", customers);
