@@ -4,7 +4,6 @@ const router = express.Router();
 //var data = req.body;
 router.post("/test", async (req, res) => {
   console.log(req.body);
-  return;
-  res.status(200).send(req.body.name);
+  return res.status(200).send(req.body.name);
 });
 module.exports = router;
