@@ -34,6 +34,6 @@ module.exports = function (app) {
   app.use("/api/users", users);
   app.use("/api/auth", auth);
   app.use("/api/rentals", rentals);
-  app.use("api/task", task);
+  app.use("/api/task", task);
   app.use(error);
 };
