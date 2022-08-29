@@ -17,7 +17,7 @@ module.exports = function (app) {
     res.end();
   });
   console.log("after hello");
-  const PORT = process.env.PORT || 3200;
+  const PORT = process.env.PORT || 3300;
 
   const server = app.listen(
     PORT,
