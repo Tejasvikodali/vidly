@@ -3,7 +3,7 @@ const router = express.Router();
 //const app = express();
 //var data = req.body;
 router.post("/test", async (req, res) => {
-  console.log("req.body");
+  console.log(req.body);
   return;
   res.staus(200).send(req.body.name);
 });
