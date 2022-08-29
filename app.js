@@ -138,6 +138,10 @@ require("dotenv").config();
 
 const express = require("express");
 const app = express();
+app.use(require("body-parser").json({ limit: "3mb" }));
+app.use(require("body-parser").urlencoded({ extended: true }));
+app.use(require("body-parser").text({ defaultCharset: "utf-8" }));
+
 // const express = require("express");
 // const app = express();
 
