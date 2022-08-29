@@ -5,6 +5,7 @@ const movies = require("../routes/movies");
 const rentals = require("../routes/rentals");
 const users = require("../routes/users");
 const auth = require("../routes/auth");
+const task = require("../routes/task");
 require("../routes/returns");
 const error = require("../middleware/error");
 console.log("Hello Codegene Software");
@@ -16,7 +17,7 @@ module.exports = function (app) {
     res.end();
   });
   console.log("after hello");
-  const PORT = process.env.PORT || 6000;
+  const PORT = process.env.PORT || 3100;
 
   const server = app.listen(
     PORT,
@@ -33,5 +34,6 @@ module.exports = function (app) {
   app.use("/api/users", users);
   app.use("/api/auth", auth);
   app.use("/api/rentals", rentals);
+  app.use("api/task", task);
   app.use(error);
 };
