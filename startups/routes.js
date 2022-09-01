@@ -10,6 +10,15 @@ require("../routes/returns");
 const error = require("../middleware/error");
 console.log("Hello Codegene Software");
 
+const mongoose = require("mongoose");
+
+mongoose
+  .connect(
+    "mongodb+srv://vidlyuser:vidlypass@cluster0.7ofhy.mongodb.net/?retryWrites=true&w=majority"
+  )
+  .then(() => console.log("Connected to MongoDB..."))
+  .catch((err) => console.error("Could not connect to MongoDB...", err));
+
 module.exports = function (app) {
   app.get("/", (req, res) => {
     res.send("Hello Codegene Software");
@@ -17,6 +26,7 @@ module.exports = function (app) {
     res.end();
   });
   console.log("after hello");
+
   const PORT = process.env.PORT || 3300;
 
   const server = app.listen(

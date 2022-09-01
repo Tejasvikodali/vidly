@@ -1,5 +1,5 @@
 const Joi = require("joi");
-//Joi.objectid = require("joi-objectId")(Joi);
+
 const mongoose = require("mongoose");
 const moment = require("moment");
 
@@ -62,19 +62,28 @@ rentalSchema.statics.lookup = function (customerId, movieId) {
     "movie._id": movieId,
   });
 };
-rentalSchema.methods.return = function () {
-  this.dateReturned = new Date();
+// rentalSchema.methods.return = function () {
+//   this.dateReturned = new Date();
 
-  const rentaldays = moment().diff(this.dateOut, "days");
-  this.rentalFee = rentaldays * this.movie.dailyRentalRate;
-};
+//   const rentaldays = moment().diff(this.dateOut, "days");
+//   this.rentalFee = rentaldays * this.movie.dailyRentalRate;
+// };
 
 const Rental = mongoose.model("Rental", rentalSchema);
+
+// function validateRental(rental) {
+//   const schema = {
+//     customerId: Joi.objectId().required(),
+//     movieId: Joi.string().required(),
+//   };
+
+//   return Joi.validate(rental, schema);
+// }
 
 function validateRental(rental) {
   const schema = {
     customerId: Joi.objectId().required(),
-    movieId: Joi.string().required(),
+    movieId: Joi.objectId().required(),
   };
 
   return Joi.validate(rental, schema);

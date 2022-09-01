@@ -8,8 +8,7 @@
     "start": "node app.js"
   },
   "engines": {
-    "node":"17.6.0"
-
+    "node": "17.6.0"
   },
   "keywords": [],
   "author": "",

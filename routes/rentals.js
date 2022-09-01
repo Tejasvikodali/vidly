@@ -70,5 +70,23 @@ router.get("/:id", async (req, res) => {
 
   res.send(rental);
 });
+router.post("/:id", async (req, res) => {
+  const movie = await Movie.findById(movie.id);
+  var postSchema = new Schema(
+    {
+      type: String,
+      rental_id: {
+        type: Schema.Types.ObjectId,
+        ref: "Rental",
+      },
+      is_active: 1,
+    },
+    { collection: "post" }
+  );
+  if (!movie)
+    return res.status(404).send("The movie with the given ID was not found.");
+
+  return res.send(movie);
+});
 
 module.exports = router;
