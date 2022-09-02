@@ -27,5 +27,22 @@ router.post("/test", async (req, res) => {
 
 //   return res.send(movie);
 // });
+// router.post("/genre", auth, async (req, res) => {
+//   console.log("post route in genres");
+//   const { error } = validateGenre(req.body);
+//   if (error) return res.status(400).send(error.details[0].message);
+
+//   var genre = new Genre({ name: req.body.name });
+//   genre = await genre.save();
+
+//   res.send(genre);
+// });
+router.post("/api/post", (req, res) => {
+  const title = req.body;
+  console.log(req.body.title);
+  res.json({
+    title,
+  });
+});
 
 module.exports = router;

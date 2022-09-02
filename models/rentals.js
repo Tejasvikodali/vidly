@@ -71,6 +71,17 @@ rentalSchema.statics.lookup = function (customerId, movieId) {
 
 const Rental = mongoose.model("Rental", rentalSchema);
 
+// async function getRental() {
+//   return await Rental.find({ title: "movie.title" });
+// }
+
+// async function run() {
+//   const rental = await getRental();
+//   console.log(rental);
+// }
+
+// run();
+
 // function validateRental(rental) {
 //   const schema = {
 //     customerId: Joi.objectId().required(),
